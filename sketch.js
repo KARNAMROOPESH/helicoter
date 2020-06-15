@@ -53,12 +53,14 @@ function draw() { rectMode(CENTER);
   packageSprite.y= packageBody.position.y
    
  if(keyCode == 32){
+	 packageBody.isStatic = false;
+	 packageBody.restitution = 5;
 	 packageBody.velocityY=4;
 	 packageBody.position.x = 200;
 	 packageBody.position.y = 390;
 	 packageSprite.x = 200;
 	 packageSprite.y = 390;
-     packageBody.isStatic = false;
+     
  }
   drawSprites();
 
